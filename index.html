@@ -3,33 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tap Simulator - Pet Value List</title>
+  <title>Tap Simulator - Value List</title>
   <style>
     :root{
       --bg:#0b0f19;
       --card:#12182a;
       --text:#e8eefc;
       --muted:#9aa7c2;
-      --border:rgba(255,255,255,0.08);
+      --border:rgba(255,255,255,0.10);
       --pill:rgba(255,255,255,0.06);
+      --good:#29d47a;
+      --bad:#ff4e84;
+      --mid:#ffbd4a;
+      --accent:#7c3aed;
     }
     *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
     body{margin:0;background:var(--bg);color:var(--text)}
-    header{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--border)}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--border);gap:14px;flex-wrap:wrap}
     header h1{margin:0;font-size:20px}
     header p{margin:0;font-size:13px;color:var(--muted)}
-    .updated{font-size:13px;color:var(--muted);text-align:right}
-    main{max-width:1100px;margin:0 auto;padding:22px}
-    .controls{display:grid;grid-template-columns:1fr 200px 200px 200px;gap:10px;margin-bottom:18px}
-    .controls input,.controls select{
+    .updated{font-size:13px;color:var(--muted);text-align:right;white-space:nowrap}
+
+    main{max-width:1200px;margin:0 auto;padding:18px}
+    .topbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+    .tab{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:650;
+      font-size:13px;
+      transition:.12s;
+      user-select:none;
+    }
+    .tab:hover{transform:translateY(-1px)}
+    .tab.active{background:rgba(124,58,237,0.25);border-color:rgba(124,58,237,0.6)}
+    .right-actions{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+
+    .controls{
+      display:grid;
+      grid-template-columns:1.2fr 200px 200px 200px 150px;
+      gap:10px;
+      margin-bottom:14px
+    }
+    .controls input,.controls select,.controls button{
       background:var(--card);
       border:1px solid var(--border);
       color:var(--text);
       padding:12px;
       border-radius:12px;
       outline:none;
+      cursor:pointer;
     }
+    .controls button{font-weight:650}
+    .controls .ghost{background:rgba(255,255,255,0.03)}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+
     .card{
       background:var(--card);
       border:1px solid var(--border);
@@ -39,6 +70,7 @@
       flex-direction:column;
       gap:10px;
       transition:transform .08s ease;
+      position:relative;
     }
     .card:hover{transform:translateY(-2px)}
     .pet-img{
@@ -50,7 +82,7 @@
       background:rgba(255,255,255,0.03);
     }
     .name-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
-    .pet-name{margin:0;font-size:14px;font-weight:650}
+    .pet-name{margin:0;font-size:14px;font-weight:750}
     .badge{
       font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);
       white-space:nowrap;text-transform:capitalize;
@@ -64,73 +96,300 @@
       font-size:12px;
       color:var(--muted);
     }
-    .pill strong{color:var(--text);font-weight:650}
+    .pill strong{color:var(--text);font-weight:750}
     .tiny{font-size:12px;color:var(--muted)}
     .sources{font-size:12px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}
     .src{border:1px solid var(--border);padding:2px 8px;border-radius:999px;font-size:11px}
+
+    .star{
+      position:absolute;top:10px;right:10px;
+      width:34px;height:34px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(0,0,0,0.25);
+      border:1px solid var(--border);
+      cursor:pointer;
+      user-select:none;
+    }
+    .star.active{border-color:rgba(255,189,74,0.8)}
+    .star span{font-size:16px}
+
+    .btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+    .btn{
+      flex:1;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:10px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:650;
+      font-size:12px;
+      transition:.12s;
+      text-align:center;
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.small{flex:0 0 auto;padding:8px 10px}
+
+    /* Trade panel */
+    .drawer{
+      position:fixed;inset:0;
+      background:rgba(0,0,0,0.55);
+      display:none;
+      align-items:flex-end;
+      justify-content:center;
+      padding:16px;
+      z-index:999;
+    }
+    .drawer.open{display:flex}
+    .panel{
+      width:min(1100px,100%);
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 30px 80px rgba(0,0,0,0.5);
+      max-height:85vh;
+      overflow:auto;
+    }
+    .panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .panel-title{font-size:16px;font-weight:800}
+    .close{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .tradegrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .tradebox{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:12px;
+      background:rgba(255,255,255,0.03);
+    }
+    .tradebox h3{margin:0 0 8px 0;font-size:14px}
+    .tradeitems{display:flex;flex-direction:column;gap:8px}
+    .tradeitem{
+      display:grid;
+      grid-template-columns:1fr 100px 90px 32px;
+      gap:8px;
+      align-items:center;
+      padding:10px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.03);
+    }
+    .tradeitem .nm{font-weight:750;font-size:13px}
+    .tradeitem input,.tradeitem select{
+      width:100%;
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:10px;
+      outline:none;
+    }
+    .trash{cursor:pointer;text-align:center;font-size:16px;opacity:.8}
+    .trash:hover{opacity:1}
+    .summary{
+      margin-top:10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .score{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.03);
+      font-weight:850;
+      font-size:14px;
+    }
+    .score.good{border-color:rgba(41,212,122,0.5);color:var(--good)}
+    .score.bad{border-color:rgba(255,78,132,0.5);color:var(--bad)}
+    .score.mid{border-color:rgba(255,189,74,0.5);color:var(--mid)}
+    .sub{color:var(--muted);font-weight:650;font-size:12px}
+    .panel-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .panel-actions button{
+      background:rgba(124,58,237,0.18);
+      border:1px solid rgba(124,58,237,0.55);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:750;
+    }
+    .panel-actions button.ghost{
+      background:rgba(255,255,255,0.04);
+      border:1px solid var(--border);
+    }
+
     .footer-note{text-align:center;font-size:12px;color:var(--muted);margin-top:18px;line-height:1.5}
-    @media (max-width:900px){.controls{grid-template-columns:1fr 1fr;}}
-    @media (max-width:520px){.controls{grid-template-columns:1fr;}}
+
+    @media (max-width:1100px){
+      .controls{grid-template-columns:1fr 1fr 1fr; }
+    }
+    @media (max-width:720px){
+      .tradegrid{grid-template-columns:1fr;}
+      .controls{grid-template-columns:1fr 1fr;}
+    }
+    @media (max-width:520px){
+      .controls{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
   <header>
     <div>
-      <h1>Tap Simulator</h1>
-      <p>Pet Value List (Normal / Golden / Rainbow)</p>
+      <h1>Tap Simulator Values</h1>
+      <p>Fan-made Value List • Normal / Golden / Rainbow • Trade Calculator • Favorites</p>
     </div>
     <div class="updated" id="updatedText">Updated: --</div>
   </header>
 
   <main>
+    <!-- Tabs -->
+    <div class="topbar" id="tabBar">
+      <div class="tab active" data-type="All Pets">All Pets</div>
+      <div class="tab" data-type="Permanent Secrets">Permanent Secrets</div>
+      <div class="tab" data-type="Limited Secrets">Limited Secrets</div>
+      <div class="tab" data-type="Leaderboard Pets">Leaderboard Pets</div>
+      <div class="tab" data-type="Limited Robux Pets">Limited Robux Pets</div>
+      <div class="tab" data-type="Current Robux Pets">Current Robux Pets</div>
+      <div class="tab" data-type="Mythicals / Best Stat Pet">Mythicals / Best Stat Pet</div>
+
+      <div class="right-actions">
+        <div class="tab" id="favTab" data-favs="1">★ Favorites</div>
+        <div class="tab" id="openTrade">Trade Calc</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
     <section class="controls">
       <input id="searchInput" type="text" placeholder="Search pets..." />
-
       <select id="raritySelect">
         <option value="all">All rarities</option>
         <option value="common">Common</option>
         <option value="rare">Rare</option>
         <option value="epic">Epic</option>
         <option value="legendary">Legendary</option>
-        <option value="secret i">Secret I</option>
-        <option value="secret ii">Secret II</option>
-        <option value="secret iii">Secret III</option>
+        <option value="secret">Secret</option>
         <option value="exclusive">Exclusive</option>
+        <option value="mythical">Mythical</option>
+        <option value="leaderboard">Leaderboard</option>
         <option value="research">Research</option>
         <option value="unknown">Unknown</option>
       </select>
 
       <select id="variantSelect">
-        <option value="all">Show: All variants</option>
-        <option value="normal">Show: Normal only</option>
-        <option value="golden">Show: Golden only</option>
-        <option value="rainbow">Show: Rainbow only</option>
+        <option value="best">Sort by: Best Variant</option>
+        <option value="normal">Sort by: Normal</option>
+        <option value="golden">Sort by: Golden</option>
+        <option value="rainbow">Sort by: Rainbow</option>
       </select>
 
       <select id="sortSelect">
-        <option value="value_desc">Sort: Value (High → Low)</option>
-        <option value="value_asc">Sort: Value (Low → High)</option>
-        <option value="name_asc">Sort: Name (A → Z)</option>
-        <option value="name_desc">Sort: Name (Z → A)</option>
+        <option value="value_desc">Value (High → Low)</option>
+        <option value="value_asc">Value (Low → High)</option>
+        <option value="name_asc">Name (A → Z)</option>
+        <option value="name_desc">Name (Z → A)</option>
       </select>
+
+      <button class="ghost" id="shareFavs">Share Favorites</button>
     </section>
 
+    <!-- Cards -->
     <section id="petsGrid" class="grid"></section>
 
     <p class="footer-note">
-      Values are community-sourced and may vary by list. This site is fan-made and not affiliated with Roblox or other value sites.
+      Values are community-sourced and may vary by list. This site is fan-made and not affiliated with Roblox or any value list sites.
     </p>
   </main>
 
+  <!-- Trade Drawer -->
+  <div class="drawer" id="tradeDrawer">
+    <div class="panel">
+      <div class="panel-head">
+        <div>
+          <div class="panel-title">Trade Calculator</div>
+          <div class="sub">Add pets from the list using “Add to Trade”. Pick variant + quantity. Share trades with links.</div>
+        </div>
+        <button class="close" id="closeTrade">Close</button>
+      </div>
+
+      <div class="tradegrid">
+        <div class="tradebox">
+          <h3>Your Offer</h3>
+          <div class="tradeitems" id="youItems"></div>
+        </div>
+        <div class="tradebox">
+          <h3>Them</h3>
+          <div class="tradeitems" id="themItems"></div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <div class="score" id="tradeResult">Add pets to compare</div>
+          <div class="sub" id="tradeTotals">You: 0 • Them: 0</div>
+        </div>
+
+        <div class="panel-actions">
+          <button class="ghost" id="resetTrade">Reset</button>
+          <button id="copyTradeLink">Copy Trade Link</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // -----------------------------
+    // State
+    // -----------------------------
     let pets = [];
+    let activeType = "All Pets";
+    let showFavsOnly = false;
+    let favorites = new Set(JSON.parse(localStorage.getItem("ts_favs") || "[]"));
+
+    // trade state: arrays of {id,name,variant,qty}
+    let trade = { you: [], them: [] };
+
+    // -----------------------------
+    // DOM
+    // -----------------------------
     const petsGrid = document.getElementById("petsGrid");
     const searchInput = document.getElementById("searchInput");
     const raritySelect = document.getElementById("raritySelect");
     const sortSelect = document.getElementById("sortSelect");
     const variantSelect = document.getElementById("variantSelect");
     const updatedText = document.getElementById("updatedText");
+    const tabBar = document.getElementById("tabBar");
+    const favTab = document.getElementById("favTab");
+    const shareFavsBtn = document.getElementById("shareFavs");
 
+    const tradeDrawer = document.getElementById("tradeDrawer");
+    const openTrade = document.getElementById("openTrade");
+    const closeTrade = document.getElementById("closeTrade");
+    const resetTradeBtn = document.getElementById("resetTrade");
+    const copyTradeLinkBtn = document.getElementById("copyTradeLink");
+    const youItems = document.getElementById("youItems");
+    const themItems = document.getElementById("themItems");
+    const tradeResult = document.getElementById("tradeResult");
+    const tradeTotals = document.getElementById("tradeTotals");
+
+    // -----------------------------
+    // Helpers
+    // -----------------------------
     function rarityColor(rarity) {
       const r = (rarity || "").toLowerCase();
       if (r.includes("common")) return "#8b95a8";
@@ -139,11 +398,20 @@
       if (r.includes("legendary")) return "#ffbd4a";
       if (r.includes("secret")) return "#ff4e84";
       if (r.includes("exclusive")) return "#4effd7";
+      if (r.includes("mythical")) return "#c084fc";
+      if (r.includes("leaderboard")) return "#f97316";
       if (r.includes("research")) return "#7dff4e";
       return "#9aa7c2";
     }
 
-    // show ? for missing/zero values
+    function trendColor(trend) {
+      const t = (trend || "").toLowerCase();
+      if (t.includes("rising")) return "var(--good)";
+      if (t.includes("dropping")) return "var(--bad)";
+      return "var(--mid)";
+    }
+
+    // show ? for missing/zero
     function formatValue(v) {
       if (v === null || v === undefined) return "?";
       if (typeof v === "string") return v;
@@ -153,7 +421,6 @@
     }
 
     function getVariantValues(p) {
-      // supports both old and new structures
       const values = p.values || {};
       const normal = (values.normal ?? p.value ?? 0);
       const golden = (values.golden ?? 0);
@@ -161,11 +428,34 @@
       return { normal, golden, rainbow };
     }
 
-    function bestSortValue(p) {
+    function getChosenValue(p, variantMode) {
       const v = getVariantValues(p);
+      if (variantMode === "normal") return Number(v.normal) || 0;
+      if (variantMode === "golden") return Number(v.golden) || 0;
+      if (variantMode === "rainbow") return Number(v.rainbow) || 0;
       return Math.max(Number(v.normal)||0, Number(v.golden)||0, Number(v.rainbow)||0);
     }
 
+    function saveFavs() {
+      localStorage.setItem("ts_favs", JSON.stringify([...favorites]));
+    }
+
+    function toast(msg) {
+      const el = document.createElement("div");
+      el.textContent = msg;
+      el.style.cssText = `
+        position:fixed;left:50%;bottom:22px;transform:translateX(-50%);
+        background:rgba(0,0,0,0.7);border:1px solid rgba(255,255,255,0.12);
+        padding:10px 12px;border-radius:14px;color:#fff;font-weight:700;
+        z-index:1000;backdrop-filter: blur(6px);
+      `;
+      document.body.appendChild(el);
+      setTimeout(()=>el.remove(), 1800);
+    }
+
+    // -----------------------------
+    // Rendering
+    // -----------------------------
     function render(list) {
       petsGrid.innerHTML = "";
       if (!list.length) {
@@ -178,6 +468,17 @@
 
         const card = document.createElement("div");
         card.className = "card";
+
+        const star = document.createElement("div");
+        star.className = "star" + (favorites.has(pet.name) ? " active" : "");
+        star.title = "Favorite";
+        star.innerHTML = `<span>${favorites.has(pet.name) ? "★" : "☆"}</span>`;
+        star.addEventListener("click", () => {
+          if (favorites.has(pet.name)) favorites.delete(pet.name);
+          else favorites.add(pet.name);
+          saveFavs();
+          applyFilters();
+        });
 
         const img = document.createElement("img");
         img.className = "pet-img";
@@ -201,45 +502,38 @@
         nameRow.appendChild(name);
         nameRow.appendChild(badge);
 
-        // ✅ Values row (ALWAYS show all 3 variants)
+        // Values row ALWAYS show all 3
         const pillRow = document.createElement("div");
         pillRow.className = "pillrow";
-        const show = variantSelect.value;
 
-        if (show === "all" || show === "normal") {
-          const pill = document.createElement("div");
-          pill.className = "pill";
-          pill.innerHTML = `Normal: <strong>${formatValue(normal)}</strong>`;
-          pillRow.appendChild(pill);
-        }
+        const p1 = document.createElement("div");
+        p1.className = "pill";
+        p1.innerHTML = `Normal: <strong>${formatValue(normal)}</strong>`;
+        pillRow.appendChild(p1);
 
-        if (show === "all" || show === "golden") {
-          const pill = document.createElement("div");
-          pill.className = "pill";
-          pill.innerHTML = `Golden: <strong>${formatValue(golden)}</strong>`;
-          pillRow.appendChild(pill);
-        }
+        const p2 = document.createElement("div");
+        p2.className = "pill";
+        p2.innerHTML = `Golden: <strong>${formatValue(golden)}</strong>`;
+        pillRow.appendChild(p2);
 
-        if (show === "all" || show === "rainbow") {
-          const pill = document.createElement("div");
-          pill.className = "pill";
-          pill.innerHTML = `Rainbow: <strong>${formatValue(rainbow)}</strong>`;
-          pillRow.appendChild(pill);
-        }
+        const p3 = document.createElement("div");
+        p3.className = "pill";
+        p3.innerHTML = `Rainbow: <strong>${formatValue(rainbow)}</strong>`;
+        pillRow.appendChild(p3);
 
         // Demand + Trend line
         const meta = document.createElement("div");
         meta.className = "tiny";
         const demand = pet.demand !== undefined ? `${pet.demand}/10` : "—";
         const trend = pet.trend || "—";
-        meta.textContent = `Demand: ${demand} • Trend: ${trend}`;
+        meta.innerHTML = `Demand: <b style="color:${trendColor(trend)}">${demand}</b> • Trend: <b style="color:${trendColor(trend)}">${trend}</b>`;
 
         // Sources
         const sources = document.createElement("div");
         sources.className = "sources";
         const keys = pet.sources ? Object.keys(pet.sources) : [];
         if (keys.length) {
-          keys.forEach(k => {
+          keys.slice(0, 5).forEach(k => {
             const el = document.createElement("span");
             el.className = "src";
             el.textContent = k;
@@ -252,11 +546,40 @@
           sources.appendChild(el);
         }
 
+        // Buttons
+        const btnrow = document.createElement("div");
+        btnrow.className = "btnrow";
+
+        const addYou = document.createElement("div");
+        addYou.className = "btn";
+        addYou.textContent = "Add to Your Offer";
+        addYou.addEventListener("click", () => addToTrade("you", pet.name));
+        btnrow.appendChild(addYou);
+
+        const addThem = document.createElement("div");
+        addThem.className = "btn";
+        addThem.textContent = "Add to Them";
+        addThem.addEventListener("click", () => addToTrade("them", pet.name));
+        btnrow.appendChild(addThem);
+
+        const copyVal = document.createElement("div");
+        copyVal.className = "btn small";
+        copyVal.textContent = "Copy";
+        copyVal.title = "Copy best value";
+        copyVal.addEventListener("click", async () => {
+          const v = getChosenValue(pet, "best");
+          await navigator.clipboard.writeText(`${pet.name} = ${v}`);
+          toast("Copied!");
+        });
+        btnrow.appendChild(copyVal);
+
+        card.appendChild(star);
         card.appendChild(img);
         card.appendChild(nameRow);
         card.appendChild(pillRow);
         card.appendChild(meta);
         card.appendChild(sources);
+        card.appendChild(btnrow);
 
         petsGrid.appendChild(card);
       });
@@ -265,23 +588,230 @@
     function applyFilters() {
       const query = searchInput.value.toLowerCase().trim();
       const rarity = raritySelect.value;
+      const sort = sortSelect.value;
+      const variantMode = variantSelect.value;
 
       let filtered = pets.filter(p => {
         const matchesName = (p.name || "").toLowerCase().includes(query);
-        const matchesRarity = rarity === "all" ? true : ((p.rarity || "Unknown").toLowerCase() === rarity);
-        return matchesName && matchesRarity;
+
+        const matchesType = activeType === "All Pets"
+          ? true
+          : ((p.type || "All Pets") === activeType);
+
+        const matchesFav = showFavsOnly ? favorites.has(p.name) : true;
+
+        const matchesRarity = rarity === "all"
+          ? true
+          : ((p.rarity || "Unknown").toLowerCase() === rarity);
+
+        return matchesName && matchesType && matchesFav && matchesRarity;
       });
 
-      const sort = sortSelect.value;
       filtered.sort((a, b) => {
-        if (sort === "value_desc") return bestSortValue(b) - bestSortValue(a);
-        if (sort === "value_asc") return bestSortValue(a) - bestSortValue(b);
         if (sort === "name_asc") return (a.name || "").localeCompare(b.name || "");
         if (sort === "name_desc") return (b.name || "").localeCompare(a.name || "");
-        return 0;
+        const av = getChosenValue(a, variantMode);
+        const bv = getChosenValue(b, variantMode);
+        if (sort === "value_asc") return av - bv;
+        return bv - av;
       });
 
       render(filtered);
+    }
+
+    // -----------------------------
+    // Tabs + Favorites
+    // -----------------------------
+    tabBar.addEventListener("click", (e) => {
+      const t = e.target.closest(".tab");
+      if (!t) return;
+
+      const isFav = t.dataset.favs === "1";
+      const type = t.dataset.type;
+
+      // favorites toggle
+      if (isFav) {
+        showFavsOnly = !showFavsOnly;
+        favTab.classList.toggle("active", showFavsOnly);
+        applyFilters();
+        return;
+      }
+
+      // type tab
+      if (type) {
+        activeType = type;
+        [...document.querySelectorAll(".tab[data-type]")].forEach(x => x.classList.remove("active"));
+        t.classList.add("active");
+        applyFilters();
+      }
+    });
+
+    shareFavsBtn.addEventListener("click", async () => {
+      const favArr = [...favorites];
+      if (!favArr.length) return toast("No favorites yet.");
+      const url = new URL(location.href);
+      url.searchParams.set("favs", encodeURIComponent(favArr.join("|")));
+      await navigator.clipboard.writeText(url.toString());
+      toast("Favorites link copied!");
+    });
+
+    // -----------------------------
+    // Trade Calculator
+    // -----------------------------
+    function addToTrade(side, petName) {
+      tradeDrawer.classList.add("open");
+      const id = Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+      trade[side].push({ id, name: petName, variant: "normal", qty: 1 });
+      renderTrade();
+      toast("Added to trade");
+    }
+
+    function removeTradeItem(side, id) {
+      trade[side] = trade[side].filter(x => x.id !== id);
+      renderTrade();
+    }
+
+    function getPetByName(nm) {
+      return pets.find(p => (p.name || "").toLowerCase() === (nm || "").toLowerCase());
+    }
+
+    function itemValue(item) {
+      const p = getPetByName(item.name);
+      if (!p) return 0;
+      const v = getVariantValues(p);
+      const base =
+        item.variant === "golden" ? (Number(v.golden)||0) :
+        item.variant === "rainbow" ? (Number(v.rainbow)||0) :
+        (Number(v.normal)||0);
+      return base * (Number(item.qty)||1);
+    }
+
+    function renderTradeList(side, container) {
+      container.innerHTML = "";
+      if (!trade[side].length) {
+        const empty = document.createElement("div");
+        empty.className = "tiny";
+        empty.textContent = "No pets added yet.";
+        container.appendChild(empty);
+        return;
+      }
+
+      trade[side].forEach(item => {
+        const row = document.createElement("div");
+        row.className = "tradeitem";
+
+        const nm = document.createElement("div");
+        nm.className = "nm";
+        nm.textContent = item.name;
+
+        const qty = document.createElement("input");
+        qty.type = "number";
+        qty.min = "1";
+        qty.value = item.qty;
+        qty.addEventListener("input", () => {
+          item.qty = Math.max(1, Number(qty.value) || 1);
+          renderTrade();
+        });
+
+        const variant = document.createElement("select");
+        ["normal","golden","rainbow"].forEach(v => {
+          const opt = document.createElement("option");
+          opt.value = v;
+          opt.textContent = v[0].toUpperCase()+v.slice(1);
+          if (item.variant === v) opt.selected = true;
+          variant.appendChild(opt);
+        });
+        variant.addEventListener("change", () => {
+          item.variant = variant.value;
+          renderTrade();
+        });
+
+        const trash = document.createElement("div");
+        trash.className = "trash";
+        trash.textContent = "🗑";
+        trash.title = "Remove";
+        trash.addEventListener("click", () => removeTradeItem(side, item.id));
+
+        row.appendChild(nm);
+        row.appendChild(qty);
+        row.appendChild(variant);
+        row.appendChild(trash);
+
+        container.appendChild(row);
+      });
+    }
+
+    function renderTrade() {
+      renderTradeList("you", youItems);
+      renderTradeList("them", themItems);
+
+      const youTotal = trade.you.reduce((a,x)=>a+itemValue(x),0);
+      const themTotal = trade.them.reduce((a,x)=>a+itemValue(x),0);
+      tradeTotals.textContent = `You: ${youTotal.toLocaleString()} • Them: ${themTotal.toLocaleString()}`;
+
+      const diff = youTotal - themTotal;
+      if (!trade.you.length && !trade.them.length) {
+        tradeResult.className = "score";
+        tradeResult.textContent = "Add pets to compare";
+        return;
+      }
+
+      const pct = themTotal === 0 ? 999 : Math.abs(diff) / themTotal;
+      if (pct <= 0.08) {
+        tradeResult.className = "score mid";
+        tradeResult.textContent = "Fair Trade";
+      } else if (diff < 0) {
+        tradeResult.className = "score good";
+        tradeResult.textContent = "Win (You gain value)";
+      } else {
+        tradeResult.className = "score bad";
+        tradeResult.textContent = "Lose (You overpay)";
+      }
+    }
+
+    openTrade.addEventListener("click", () => {
+      tradeDrawer.classList.add("open");
+      renderTrade();
+    });
+
+    closeTrade.addEventListener("click", () => tradeDrawer.classList.remove("open"));
+    tradeDrawer.addEventListener("click", (e) => { if (e.target === tradeDrawer) tradeDrawer.classList.remove("open"); });
+
+    resetTradeBtn.addEventListener("click", () => {
+      trade = { you: [], them: [] };
+      renderTrade();
+      toast("Trade reset");
+    });
+
+    copyTradeLinkBtn.addEventListener("click", async () => {
+      const url = new URL(location.href);
+      url.searchParams.set("trade", encodeURIComponent(JSON.stringify(trade)));
+      await navigator.clipboard.writeText(url.toString());
+      toast("Trade link copied!");
+    });
+
+    // -----------------------------
+    // Load data + URL state
+    // -----------------------------
+    function loadUrlState() {
+      const params = new URLSearchParams(location.search);
+      const favs = params.get("favs");
+      const tradeParam = params.get("trade");
+
+      if (favs) {
+        try {
+          const arr = decodeURIComponent(favs).split("|").filter(Boolean);
+          arr.forEach(x => favorites.add(x));
+          saveFavs();
+        } catch {}
+      }
+
+      if (tradeParam) {
+        try {
+          const obj = JSON.parse(decodeURIComponent(tradeParam));
+          if (obj && obj.you && obj.them) trade = obj;
+        } catch {}
+      }
     }
 
     async function loadPets() {
@@ -290,6 +820,9 @@
         const data = await res.json();
         pets = data.pets || [];
         updatedText.textContent = "Updated: " + (data.updated || "Unknown");
+
+        loadUrlState();
+        renderTrade();
         applyFilters();
       } catch (err) {
         petsGrid.innerHTML = '<p style="color:#9aa7c2;">Failed to load data/pets.json.</p>';
