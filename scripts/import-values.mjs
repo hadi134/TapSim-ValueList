@@ -25,37 +25,29 @@ function median(nums) {
 // NOTE: If Zack's site doesn't have embedded JSON, this returns empty.
 // We'll still keep structure for future.
 async function sourceZack() {
-  const url = "https://raw.githubusercontent.com/notrealzack/tap-simulator-values/main/index.html";
+  const url = "https://notrealzack.github.io/tap-simulator-values/";
   try {
-    const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
-    if (!res.ok) throw new Error("fetch failed");
-    const html = await res.text();
+    const html = await fetchText(url);
 
-    // Try to find embedded JSON array like: const pets = [...]
-    const jsonMatch = html.match(/const\s+pets\s*=\s*(\[[\s\S]*?\]);/);
-    if (jsonMatch) {
-      try {
-        const arr = JSON.parse(jsonMatch[1]);
-        const pets = arr
-          .filter(p => p?.name)
-          .map(p => ({
-            name: p.name,
-            value: Number(p.value) || 0,
-            rarity: p.rarity || null,
-            source: "zack"
-          }));
-        console.log("✅ Zack parsed JSON:", pets.length);
-        return pets;
-      } catch (e) {}
+    const pets = [];
+
+    // finds things like: <h3>Pet Name</h3> ... Value: 12345
+    const nameMatches = [...html.matchAll(/<h3[^>]*>([^<]+)<\/h3>/g)].map(m => m[1].trim());
+    const valueMatches = [...html.matchAll(/Value:\s*<\/[^>]+>\s*([0-9,]+)/g)].map(m => Number(m[1].replace(/,/g,"")));
+
+    const n = Math.min(nameMatches.length, valueMatches.length);
+    for (let i = 0; i < n; i++) {
+      pets.push({ name: nameMatches[i], value: valueMatches[i], rarity: null, source: "zack" });
     }
 
-    console.log("⚠️ Zack had no embedded JSON (skip for now).");
-    return [];
+    console.log("✅ Zack HTML parsed:", pets.length);
+    return pets;
   } catch (e) {
     console.log("⚠️ Zack source failed:", e.message);
     return [];
   }
 }
+
 
 // ----- PLACEHOLDERS: MoonValues / Cosmo / ValuesKing
 // These need specific endpoints discovered first.
