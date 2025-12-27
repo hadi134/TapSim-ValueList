@@ -5,64 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tap Simulator - Pet Value List</title>
   <style>
-    :root {
-      --bg: #0b0f19;
-      --card: #12182a;
-      --text: #e8eefc;
-      --muted: #9aa7c2;
-      --border: rgba(255,255,255,0.08);
+    :root{
+      --bg:#0b0f19;
+      --card:#12182a;
+      --text:#e8eefc;
+      --muted:#9aa7c2;
+      --border:rgba(255,255,255,0.08);
+      --pill:rgba(255,255,255,0.06);
     }
-    * { box-sizing: border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    body { margin: 0; background: var(--bg); color: var(--text); }
-    header {
-      display:flex; justify-content:space-between; align-items:center;
-      padding: 18px 22px; border-bottom:1px solid var(--border);
+    *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text)}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--border)}
+    header h1{margin:0;font-size:20px}
+    header p{margin:0;font-size:13px;color:var(--muted)}
+    .updated{font-size:13px;color:var(--muted);text-align:right}
+    main{max-width:1100px;margin:0 auto;padding:22px}
+    .controls{display:grid;grid-template-columns:1fr 200px 200px 200px;gap:10px;margin-bottom:18px}
+    .controls input,.controls select{
+      background:var(--card);
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:12px;
+      border-radius:12px;
+      outline:none;
     }
-    header h1 { margin:0; font-size:20px; }
-    header p { margin:0; font-size:13px; color: var(--muted); }
-    .updated { font-size:13px; color: var(--muted); }
-    main { max-width:1100px; margin:0 auto; padding:22px; }
-    .controls {
-      display:grid; grid-template-columns: 1fr 200px 240px;
-      gap:10px; margin-bottom: 18px;
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      transition:transform .08s ease;
     }
-    .controls input, .controls select {
-      background: var(--card); border:1px solid var(--border);
-      color: var(--text); padding:12px; border-radius:12px; outline:none;
+    .card:hover{transform:translateY(-2px)}
+    .pet-img{
+      width:100%;
+      aspect-ratio:1/1;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.03);
     }
-    .grid {
-      display:grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap:12px;
+    .name-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .pet-name{margin:0;font-size:14px;font-weight:650}
+    .badge{
+      font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);
+      white-space:nowrap;text-transform:capitalize;
     }
-    .card {
-      background: var(--card); border:1px solid var(--border);
-      border-radius:16px; padding:14px;
-      display:flex; flex-direction:column; gap:10px;
-      transition: transform 0.08s ease;
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{
+      background:var(--pill);
+      border:1px solid var(--border);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
     }
-    .card:hover { transform: translateY(-2px); }
-    .pet-img {
-      width:100%; aspect-ratio:1/1; border-radius:14px;
-      object-fit:cover; border:1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-    }
-    .name-row { display:flex; justify-content:space-between; align-items:center; gap:10px; }
-    .pet-name { margin:0; font-size:14px; font-weight:650; }
-    .badge {
-      font-size:11px; padding:4px 8px; border-radius:999px;
-      border:1px solid var(--border); white-space:nowrap;
-      text-transform:capitalize;
-    }
-    .value { font-size:13px; color: var(--muted); }
-    .footer-note { text-align:center; font-size:12px; color: var(--muted); margin-top:18px; }
-    @media (max-width: 760px) { .controls { grid-template-columns:1fr; } }
+    .pill strong{color:var(--text);font-weight:650}
+    .tiny{font-size:12px;color:var(--muted)}
+    .sources{font-size:12px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}
+    .src{border:1px solid var(--border);padding:2px 8px;border-radius:999px;font-size:11px}
+    .footer-note{text-align:center;font-size:12px;color:var(--muted);margin-top:18px;line-height:1.5}
+    @media (max-width:900px){.controls{grid-template-columns:1fr 1fr;}}
+    @media (max-width:520px){.controls{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
   <header>
     <div>
       <h1>Tap Simulator</h1>
-      <p>Pet Value List</p>
+      <p>Pet Value List (Normal / Golden / Rainbow)</p>
     </div>
     <div class="updated" id="updatedText">Updated: --</div>
   </header>
@@ -81,7 +96,16 @@
         <option value="secret iii">Secret III</option>
         <option value="exclusive">Exclusive</option>
         <option value="research">Research</option>
+        <option value="unknown">Unknown</option>
       </select>
+
+      <select id="variantSelect">
+        <option value="all">Show: All variants</option>
+        <option value="normal">Show: Normal only</option>
+        <option value="golden">Show: Golden only</option>
+        <option value="rainbow">Show: Rainbow only</option>
+      </select>
+
       <select id="sortSelect">
         <option value="value_desc">Sort: Value (High → Low)</option>
         <option value="value_asc">Sort: Value (Low → High)</option>
@@ -93,7 +117,7 @@
     <section id="petsGrid" class="grid"></section>
 
     <p class="footer-note">
-      Fan-made value list. Values can change anytime.
+      Values are community-sourced and may vary by list. This site is fan-made and not affiliated with Roblox or other value sites.
     </p>
   </main>
 
@@ -103,6 +127,7 @@
     const searchInput = document.getElementById("searchInput");
     const raritySelect = document.getElementById("raritySelect");
     const sortSelect = document.getElementById("sortSelect");
+    const variantSelect = document.getElementById("variantSelect");
     const updatedText = document.getElementById("updatedText");
 
     function rarityColor(rarity) {
@@ -117,10 +142,26 @@
       return "#9aa7c2";
     }
 
-    function formatValue(value) {
-      if (value === null || value === undefined) return "Unknown";
-      if (typeof value === "string") return value;
-      return value.toLocaleString();
+    function formatValue(v) {
+      if (v === null || v === undefined) return "0";
+      if (typeof v === "string") return v;
+      if (Number.isNaN(Number(v))) return "0";
+      return Number(v).toLocaleString();
+    }
+
+    function getVariantValues(p) {
+      // Supports both old and new structure
+      const values = p.values || {};
+      const normal = (values.normal ?? p.value ?? 0);
+      const golden = (values.golden ?? 0);
+      const rainbow = (values.rainbow ?? 0);
+      return { normal, golden, rainbow };
+    }
+
+    function bestSortValue(p) {
+      const v = getVariantValues(p);
+      // pick highest available variant so sorting makes sense
+      return Math.max(Number(v.normal)||0, Number(v.golden)||0, Number(v.rainbow)||0);
     }
 
     function render(list) {
@@ -129,7 +170,10 @@
         petsGrid.innerHTML = '<p style="color:#9aa7c2;">No pets found.</p>';
         return;
       }
+
       list.forEach(pet => {
+        const { normal, golden, rainbow } = getVariantValues(pet);
+
         const card = document.createElement("div");
         card.className = "card";
 
@@ -137,6 +181,7 @@
         img.className = "pet-img";
         img.src = pet.image || "https://via.placeholder.com/300?text=No+Image";
         img.alt = pet.name;
+        img.loading = "lazy";
 
         const nameRow = document.createElement("div");
         nameRow.className = "name-row";
@@ -154,13 +199,63 @@
         nameRow.appendChild(name);
         nameRow.appendChild(badge);
 
-        const value = document.createElement("div");
-        value.className = "value";
-        value.textContent = "Value: " + formatValue(pet.value);
+        // Values row
+        const pillRow = document.createElement("div");
+        pillRow.className = "pillrow";
+
+        const show = variantSelect.value;
+
+        if (show === "all" || show === "normal") {
+          const pill = document.createElement("div");
+          pill.className = "pill";
+          pill.innerHTML = `Normal: <strong>${formatValue(normal)}</strong>`;
+          pillRow.appendChild(pill);
+        }
+
+        if ((show === "all" || show === "golden") && Number(golden) > 0) {
+          const pill = document.createElement("div");
+          pill.className = "pill";
+          pill.innerHTML = `Golden: <strong>${formatValue(golden)}</strong>`;
+          pillRow.appendChild(pill);
+        }
+
+        if ((show === "all" || show === "rainbow") && Number(rainbow) > 0) {
+          const pill = document.createElement("div");
+          pill.className = "pill";
+          pill.innerHTML = `Rainbow: <strong>${formatValue(rainbow)}</strong>`;
+          pillRow.appendChild(pill);
+        }
+
+        // Demand + Trend
+        const meta = document.createElement("div");
+        meta.className = "tiny";
+        const demand = pet.demand !== undefined ? `${pet.demand}/10` : "—";
+        const trend = pet.trend || "—";
+        meta.textContent = `Demand: ${demand} • Trend: ${trend}`;
+
+        // Sources row
+        const sources = document.createElement("div");
+        sources.className = "sources";
+        const keys = pet.sources ? Object.keys(pet.sources) : [];
+        if (keys.length) {
+          keys.forEach(k => {
+            const el = document.createElement("span");
+            el.className = "src";
+            el.textContent = k;
+            sources.appendChild(el);
+          });
+        } else {
+          const el = document.createElement("span");
+          el.className = "src";
+          el.textContent = "no sources";
+          sources.appendChild(el);
+        }
 
         card.appendChild(img);
         card.appendChild(nameRow);
-        card.appendChild(value);
+        card.appendChild(pillRow);
+        card.appendChild(meta);
+        card.appendChild(sources);
 
         petsGrid.appendChild(card);
       });
@@ -172,14 +267,14 @@
 
       let filtered = pets.filter(p => {
         const matchesName = (p.name || "").toLowerCase().includes(query);
-        const matchesRarity = rarity === "all" ? true : ((p.rarity || "").toLowerCase() === rarity);
+        const matchesRarity = rarity === "all" ? true : ((p.rarity || "Unknown").toLowerCase() === rarity);
         return matchesName && matchesRarity;
       });
 
       const sort = sortSelect.value;
       filtered.sort((a, b) => {
-        if (sort === "value_desc") return (b.value || 0) - (a.value || 0);
-        if (sort === "value_asc") return (a.value || 0) - (b.value || 0);
+        if (sort === "value_desc") return bestSortValue(b) - bestSortValue(a);
+        if (sort === "value_asc") return bestSortValue(a) - bestSortValue(b);
         if (sort === "name_asc") return (a.name || "").localeCompare(b.name || "");
         if (sort === "name_desc") return (b.name || "").localeCompare(a.name || "");
         return 0;
@@ -196,7 +291,7 @@
         updatedText.textContent = "Updated: " + (data.updated || "Unknown");
         applyFilters();
       } catch (err) {
-        petsGrid.innerHTML = '<p style="color:#9aa7c2;">Failed to load data/pets.json. Make sure file exists.</p>';
+        petsGrid.innerHTML = '<p style="color:#9aa7c2;">Failed to load data/pets.json.</p>';
         console.error(err);
       }
     }
@@ -204,6 +299,7 @@
     searchInput.addEventListener("input", applyFilters);
     raritySelect.addEventListener("change", applyFilters);
     sortSelect.addEventListener("change", applyFilters);
+    variantSelect.addEventListener("change", applyFilters);
 
     loadPets();
   </script>
