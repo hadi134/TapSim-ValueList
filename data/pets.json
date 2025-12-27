@@ -1,604 +1,705 @@
 {
   "updated": "2025-12-27",
+  "method": "median",
   "pets": [
     {
       "name": "5M Frost Monarch",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/5M Frost Monarch.png"
     },
     {
       "name": "5M North Star",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/5M North Star.png"
     },
     {
       "name": "5M Snowglobe",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/5M Snowglobe.png"
     },
     {
       "name": "Aetherfin",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Aetherfin.png"
     },
     {
       "name": "Amethyst Hawk",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Amethyst Hawk.png"
     },
     {
       "name": "Archangel",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Archangel.png"
     },
     {
       "name": "Arid Goat",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Arid Goat.png"
     },
     {
       "name": "Ash Dog",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ash Dog.png"
     },
     {
       "name": "Ashfiend",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ashfiend.png"
     },
     {
       "name": "Aurelin",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Aurelin.png"
     },
     {
       "name": "Bear Bender",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bear Bender.png"
     },
     {
       "name": "Bee",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bee.png"
     },
     {
       "name": "Bladekaiser",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bladekaiser.png"
     },
     {
       "name": "Blink",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Blink.png"
     },
     {
       "name": "Bloodfrost",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bloodfrost.png"
     },
     {
       "name": "Blueberry Taffy",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Blueberry Taffy.png"
     },
     {
       "name": "Bone Bull",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bone Bull.png"
     },
     {
       "name": "Bone Cat",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bone Cat.png"
     },
     {
       "name": "Bonsai Monster",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bonsai Monster.png"
     },
     {
       "name": "Bubblegum Chaos",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Bubblegum Chaos.png"
     },
     {
       "name": "Cactus Raider",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Cactus Raider.png"
     },
     {
       "name": "Candy God",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Candy God.png"
     },
     {
       "name": "Caramel Bunny",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Caramel Bunny.png"
     },
     {
       "name": "Chocolate Marauder",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Chocolate Marauder.png"
     },
     {
       "name": "Chronos",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Chronos.png"
     },
     {
       "name": "Cotton Candy Pop",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Cotton Candy Pop.png"
     },
     {
       "name": "Cottontail",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Cottontail.png"
     },
     {
       "name": "Cow",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Cow.png"
     },
     {
       "name": "Divine Celestia",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Divine Celestia.png"
     },
     {
       "name": "Divine Dragon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Divine Dragon.png"
     },
     {
       "name": "Divine Guard",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Divine Guard.png"
     },
     {
       "name": "Dolphin",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Dolphin.png"
     },
     {
       "name": "Dusty Wolf",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Dusty Wolf.png"
     },
     {
       "name": "Ember Inkling",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ember Inkling.png"
     },
     {
       "name": "Emberagon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Emberagon.png"
     },
     {
       "name": "Festive Bunny",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Festive Bunny.png"
     },
     {
       "name": "Festive Cat",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Festive Cat.png"
     },
     {
       "name": "Festive Dog",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Festive Dog.png"
     },
     {
       "name": "Festive Penguin",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Festive Penguin.png"
     },
     {
       "name": "Fire Ninja",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Fire Ninja.png"
     },
     {
       "name": "Forest Wyvern",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Forest Wyvern.png"
     },
     {
       "name": "Fox",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Fox.png"
     },
     {
       "name": "Frost Angel",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Frost Angel.png"
     },
     {
       "name": "Frost Archangel",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Frost Archangel.png"
     },
     {
       "name": "Frost Golem",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Frost Golem.png"
     },
     {
       "name": "Frost Wolf",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Frost Wolf.png"
     },
     {
       "name": "Frosty Snowman",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Frosty Snowman.png"
     },
     {
       "name": "Frozen Yeti",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Frozen Yeti.png"
     },
     {
       "name": "Gingerbread Dragon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Gingerbread Dragon.png"
     },
     {
       "name": "Hydra Magma Empyreus",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Hydra Magma Empyreus.png"
     },
     {
       "name": "Ice Crystal Demon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ice Crystal Demon.png"
     },
     {
       "name": "Kairos",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Kairos.png"
     },
     {
       "name": "Karate Lynx",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Karate Lynx.png"
     },
     {
       "name": "King Crab",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/King Crab.png"
     },
     {
       "name": "King Emblazed",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/King Emblazed.png"
     },
     {
       "name": "King Kraken",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/King Kraken.png"
     },
     {
       "name": "Lava God",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Lava God.png"
     },
     {
       "name": "Lion God",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Lion God.png"
     },
     {
       "name": "Magma Empyreus",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Magma Empyreus.png"
     },
     {
       "name": "Magma Imp",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Magma Imp.png"
     },
     {
       "name": "Magma Wyvern",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Magma Wyvern.png"
     },
     {
       "name": "Magmasaur",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Magmasaur.png"
     },
     {
       "name": "Magmatic Angel",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Magmatic Angel.png"
     },
     {
       "name": "Magmawrath",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Magmawrath.png"
     },
     {
       "name": "Molten Coffee Dragon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Molten Coffee Dragon.png"
     },
     {
       "name": "Monkey Warrior",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Monkey Warrior.png"
     },
     {
       "name": "Nemo",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Nemo.png"
     },
     {
       "name": "Neon Cat",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Neon Cat.png"
     },
     {
       "name": "Ninja Demon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ninja Demon.png"
     },
     {
       "name": "Ninja Pup",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ninja Pup.png"
     },
     {
       "name": "Ninja Tri-Demon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Ninja Tri-Demon.png"
     },
     {
       "name": "Orca Dominator",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Orca Dominator.png"
     },
     {
       "name": "Paradox",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Paradox.png"
     },
     {
       "name": "Penguin",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Penguin.png"
     },
     {
       "name": "Pig",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Pig.png"
     },
     {
       "name": "Polar Bear",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Polar Bear.png"
     },
     {
       "name": "Queen Bee",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Queen Bee.png"
     },
     {
       "name": "Raging Claw",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Raging Claw.png"
     },
     {
       "name": "Royal Jelly",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Royal Jelly.png"
     },
     {
       "name": "Sakura Dominator",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Sakura Dominator.png"
     },
     {
       "name": "Sakura Nymph",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Sakura Nymph.png"
     },
     {
       "name": "Sakura Queen",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Sakura Queen.png"
     },
     {
       "name": "Samureye",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Samureye.png"
     },
     {
       "name": "Samuwai",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Samuwai.png"
     },
     {
       "name": "Sensei Panda",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Sensei Panda.png"
     },
     {
       "name": "Serapha",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Serapha.png"
     },
     {
       "name": "Seraphlux",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Seraphlux.png"
     },
     {
       "name": "Sharkie",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Sharkie.png"
     },
     {
       "name": "Silent Assassin",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Silent Assassin.png"
     },
     {
       "name": "Silver Emperor",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Silver Emperor.png"
     },
     {
       "name": "Social Dragon",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Social Dragon.png"
     },
     {
       "name": "Sproutling",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Sproutling.png"
     },
     {
       "name": "Starfish",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Starfish.png"
     },
     {
       "name": "Treant",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Treant.png"
     },
     {
       "name": "Trophy Guardian",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Trophy Guardian.png"
     },
     {
       "name": "Tundra God",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Tundra God.png"
     },
     {
       "name": "Voltgryph",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Voltgryph.png"
     },
     {
       "name": "Waffle Knight",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Waffle Knight.png"
     },
     {
       "name": "Water Beast",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Water Beast.png"
     },
     {
       "name": "Weeping Angel",
       "rarity": "Unknown",
       "value": 0,
+      "sources": {},
       "image": "pets/Weeping Angel.png"
     }
   ]
