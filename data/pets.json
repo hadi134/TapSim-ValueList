@@ -4,7 +4,7 @@
   "pets": [
     {
       "name": "5M Frost Monarch",
-      "rarity": "Exclusive",
+      "rarity": "Secret",
       "value": 1150,
       "sources": {
         "moonvalues": {
@@ -26,11 +26,12 @@
         "rainbow": 4100
       },
       "demand": 5,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Limited Secrets"
     },
     {
       "name": "5M North Star",
-      "rarity": "Exclusive",
+      "rarity": "Secret",
       "value": 180,
       "sources": {
         "moonvalues": {
@@ -52,32 +53,36 @@
         "rainbow": 550
       },
       "demand": 4,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Limited Secrets"
     },
     {
       "name": "5M Snowglobe",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/5M Snowglobe.png"
+      "image": "pets/5M Snowglobe.png",
+      "type": "All Pets"
     },
     {
       "name": "Aetherfin",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Aetherfin.png"
+      "image": "pets/Aetherfin.png",
+      "type": "All Pets"
     },
     {
       "name": "Amethyst Hawk",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Amethyst Hawk.png"
+      "image": "pets/Amethyst Hawk.png",
+      "type": "All Pets"
     },
     {
       "name": "Archangel",
-      "rarity": "Legendary",
+      "rarity": "Mythical",
       "value": 1,
       "sources": {
         "moonvalues": {
@@ -99,102 +104,116 @@
         "rainbow": 4
       },
       "demand": 0,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Mythicals / Best Stat Pet"
     },
     {
       "name": "Arid Goat",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Arid Goat.png"
+      "image": "pets/Arid Goat.png",
+      "type": "All Pets"
     },
     {
       "name": "Ash Dog",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ash Dog.png"
+      "image": "pets/Ash Dog.png",
+      "type": "All Pets"
     },
     {
       "name": "Ashfiend",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ashfiend.png"
+      "image": "pets/Ashfiend.png",
+      "type": "All Pets"
     },
     {
       "name": "Aurelin",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Aurelin.png"
+      "image": "pets/Aurelin.png",
+      "type": "All Pets"
     },
     {
       "name": "Bear Bender",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bear Bender.png"
+      "image": "pets/Bear Bender.png",
+      "type": "All Pets"
     },
     {
       "name": "Bee",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bee.png"
+      "image": "pets/Bee.png",
+      "type": "All Pets"
     },
     {
       "name": "Bladekaiser",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bladekaiser.png"
+      "image": "pets/Bladekaiser.png",
+      "type": "All Pets"
     },
     {
       "name": "Blink",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Blink.png"
+      "image": "pets/Blink.png",
+      "type": "All Pets"
     },
     {
       "name": "Bloodfrost",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bloodfrost.png"
+      "image": "pets/Bloodfrost.png",
+      "type": "All Pets"
     },
     {
       "name": "Blueberry Taffy",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Blueberry Taffy.png"
+      "image": "pets/Blueberry Taffy.png",
+      "type": "All Pets"
     },
     {
       "name": "Bone Bull",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bone Bull.png"
+      "image": "pets/Bone Bull.png",
+      "type": "All Pets"
     },
     {
       "name": "Bone Cat",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bone Cat.png"
+      "image": "pets/Bone Cat.png",
+      "type": "All Pets"
     },
     {
       "name": "Bonsai Monster",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Bonsai Monster.png"
+      "image": "pets/Bonsai Monster.png",
+      "type": "All Pets"
     },
     {
       "name": "Bubblegum Chaos",
-      "rarity": "Epic",
+      "rarity": "Mythical",
       "value": 0.1,
       "sources": {
         "moonvalues": {
@@ -216,18 +235,20 @@
         "rainbow": 0.3
       },
       "demand": 2,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Mythicals / Best Stat Pet"
     },
     {
       "name": "Cactus Raider",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Cactus Raider.png"
+      "image": "pets/Cactus Raider.png",
+      "type": "All Pets"
     },
     {
       "name": "Candy God",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 35,
       "sources": {
         "tapvalues": {
@@ -255,18 +276,20 @@
         "rainbow": 70
       },
       "demand": 3,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Caramel Bunny",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Caramel Bunny.png"
+      "image": "pets/Caramel Bunny.png",
+      "type": "All Pets"
     },
     {
       "name": "Chocolate Marauder",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 45,
       "sources": {
         "tapvalues": {
@@ -294,11 +317,12 @@
         "rainbow": 80
       },
       "demand": 3,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Chronos",
-      "rarity": "Secret II",
+      "rarity": "Exclusive",
       "value": 9500,
       "sources": {
         "moonvalues": {
@@ -320,28 +344,32 @@
         "rainbow": 16800
       },
       "demand": 8,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Limited Robux Pets"
     },
     {
       "name": "Cotton Candy Pop",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Cotton Candy Pop.png"
+      "image": "pets/Cotton Candy Pop.png",
+      "type": "All Pets"
     },
     {
       "name": "Cottontail",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Cottontail.png"
+      "image": "pets/Cottontail.png",
+      "type": "All Pets"
     },
     {
       "name": "Cow",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Cow.png"
+      "image": "pets/Cow.png",
+      "type": "All Pets"
     },
     {
       "name": "Divine Celestia",
@@ -367,11 +395,12 @@
         "rainbow": 10000
       },
       "demand": 10,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "All Pets"
     },
     {
       "name": "Divine Dragon",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 30,
       "sources": {
         "tapvalues": {
@@ -399,119 +428,136 @@
         "rainbow": 90
       },
       "demand": 3,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Divine Guard",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Divine Guard.png"
+      "image": "pets/Divine Guard.png",
+      "type": "All Pets"
     },
     {
       "name": "Dolphin",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Dolphin.png"
+      "image": "pets/Dolphin.png",
+      "type": "All Pets"
     },
     {
       "name": "Dusty Wolf",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Dusty Wolf.png"
+      "image": "pets/Dusty Wolf.png",
+      "type": "All Pets"
     },
     {
       "name": "Ember Inkling",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ember Inkling.png"
+      "image": "pets/Ember Inkling.png",
+      "type": "All Pets"
     },
     {
       "name": "Emberagon",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Emberagon.png"
+      "image": "pets/Emberagon.png",
+      "type": "All Pets"
     },
     {
       "name": "Festive Bunny",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Festive Bunny.png"
+      "image": "pets/Festive Bunny.png",
+      "type": "All Pets"
     },
     {
       "name": "Festive Cat",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Festive Cat.png"
+      "image": "pets/Festive Cat.png",
+      "type": "All Pets"
     },
     {
       "name": "Festive Dog",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Festive Dog.png"
+      "image": "pets/Festive Dog.png",
+      "type": "All Pets"
     },
     {
       "name": "Festive Penguin",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Festive Penguin.png"
+      "image": "pets/Festive Penguin.png",
+      "type": "All Pets"
     },
     {
       "name": "Fire Ninja",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Fire Ninja.png"
+      "image": "pets/Fire Ninja.png",
+      "type": "All Pets"
     },
     {
       "name": "Forest Wyvern",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Forest Wyvern.png"
+      "image": "pets/Forest Wyvern.png",
+      "type": "All Pets"
     },
     {
       "name": "Fox",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Fox.png"
+      "image": "pets/Fox.png",
+      "type": "All Pets"
     },
     {
       "name": "Frost Angel",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Frost Angel.png"
+      "image": "pets/Frost Angel.png",
+      "type": "All Pets"
     },
     {
       "name": "Frost Archangel",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Frost Archangel.png"
+      "image": "pets/Frost Archangel.png",
+      "type": "All Pets"
     },
     {
       "name": "Frost Golem",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Frost Golem.png"
+      "image": "pets/Frost Golem.png",
+      "type": "All Pets"
     },
     {
       "name": "Frost Wolf",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Frost Wolf.png"
+      "image": "pets/Frost Wolf.png",
+      "type": "All Pets"
     },
     {
       "name": "Frosty Snowman",
@@ -537,14 +583,16 @@
         "rainbow": 550
       },
       "demand": 7,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Limited Secrets"
     },
     {
       "name": "Frozen Yeti",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Frozen Yeti.png"
+      "image": "pets/Frozen Yeti.png",
+      "type": "All Pets"
     },
     {
       "name": "Gingerbread Dragon",
@@ -570,25 +618,28 @@
         "rainbow": 2
       },
       "demand": 4,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "All Pets"
     },
     {
       "name": "Hydra Magma Empyreus",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Hydra Magma Empyreus.png"
+      "image": "pets/Hydra Magma Empyreus.png",
+      "type": "All Pets"
     },
     {
       "name": "Ice Crystal Demon",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ice Crystal Demon.png"
+      "image": "pets/Ice Crystal Demon.png",
+      "type": "All Pets"
     },
     {
       "name": "Kairos",
-      "rarity": "Secret II",
+      "rarity": "Exclusive",
       "value": 110,
       "sources": {
         "moonvalues": {
@@ -610,25 +661,28 @@
         "rainbow": 350
       },
       "demand": 6,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Limited Robux Pets"
     },
     {
       "name": "Karate Lynx",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Karate Lynx.png"
+      "image": "pets/Karate Lynx.png",
+      "type": "All Pets"
     },
     {
       "name": "King Crab",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/King Crab.png"
+      "image": "pets/King Crab.png",
+      "type": "All Pets"
     },
     {
       "name": "King Emblazed",
-      "rarity": "Rare",
+      "rarity": "Mythical",
       "value": 0.1,
       "sources": {
         "moonvalues": {
@@ -650,11 +704,12 @@
         "rainbow": 0.3
       },
       "demand": 1,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Mythicals / Best Stat Pet"
     },
     {
       "name": "King Kraken",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 350,
       "sources": {
         "tapvalues": {
@@ -682,46 +737,52 @@
         "rainbow": 2050
       },
       "demand": 6,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Lava God",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Lava God.png"
+      "image": "pets/Lava God.png",
+      "type": "All Pets"
     },
     {
       "name": "Lion God",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Lion God.png"
+      "image": "pets/Lion God.png",
+      "type": "All Pets"
     },
     {
       "name": "Magma Empyreus",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Magma Empyreus.png"
+      "image": "pets/Magma Empyreus.png",
+      "type": "All Pets"
     },
     {
       "name": "Magma Imp",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Magma Imp.png"
+      "image": "pets/Magma Imp.png",
+      "type": "All Pets"
     },
     {
       "name": "Magma Wyvern",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Magma Wyvern.png"
+      "image": "pets/Magma Wyvern.png",
+      "type": "All Pets"
     },
     {
       "name": "Magmasaur",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 50,
       "sources": {
         "tapvalues": {
@@ -749,74 +810,84 @@
         "rainbow": 125
       },
       "demand": 4,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Magmatic Angel",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Magmatic Angel.png"
+      "image": "pets/Magmatic Angel.png",
+      "type": "All Pets"
     },
     {
       "name": "Magmawrath",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Magmawrath.png"
+      "image": "pets/Magmawrath.png",
+      "type": "All Pets"
     },
     {
       "name": "Molten Coffee Dragon",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Molten Coffee Dragon.png"
+      "image": "pets/Molten Coffee Dragon.png",
+      "type": "All Pets"
     },
     {
       "name": "Monkey Warrior",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Monkey Warrior.png"
+      "image": "pets/Monkey Warrior.png",
+      "type": "All Pets"
     },
     {
       "name": "Nemo",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Nemo.png"
+      "image": "pets/Nemo.png",
+      "type": "All Pets"
     },
     {
       "name": "Neon Cat",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Neon Cat.png"
+      "image": "pets/Neon Cat.png",
+      "type": "All Pets"
     },
     {
       "name": "Ninja Demon",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ninja Demon.png"
+      "image": "pets/Ninja Demon.png",
+      "type": "All Pets"
     },
     {
       "name": "Ninja Pup",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ninja Pup.png"
+      "image": "pets/Ninja Pup.png",
+      "type": "All Pets"
     },
     {
       "name": "Ninja Tri-Demon",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Ninja Tri-Demon.png"
+      "image": "pets/Ninja Tri-Demon.png",
+      "type": "All Pets"
     },
     {
       "name": "Orca Dominator",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 55,
       "sources": {
         "tapvalues": {
@@ -844,11 +915,12 @@
         "rainbow": 165
       },
       "demand": 4,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Paradox",
-      "rarity": "Secret II",
+      "rarity": "Exclusive",
       "value": 165,
       "sources": {
         "moonvalues": {
@@ -870,39 +942,44 @@
         "rainbow": 740
       },
       "demand": 7,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Limited Robux Pets"
     },
     {
       "name": "Penguin",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Penguin.png"
+      "image": "pets/Penguin.png",
+      "type": "All Pets"
     },
     {
       "name": "Pig",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Pig.png"
+      "image": "pets/Pig.png",
+      "type": "All Pets"
     },
     {
       "name": "Polar Bear",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Polar Bear.png"
+      "image": "pets/Polar Bear.png",
+      "type": "All Pets"
     },
     {
       "name": "Queen Bee",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Queen Bee.png"
+      "image": "pets/Queen Bee.png",
+      "type": "All Pets"
     },
     {
       "name": "Raging Claw",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 70,
       "sources": {
         "tapvalues": {
@@ -930,18 +1007,20 @@
         "rainbow": 270
       },
       "demand": 2,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Royal Jelly",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Royal Jelly.png"
+      "image": "pets/Royal Jelly.png",
+      "type": "All Pets"
     },
     {
       "name": "Sakura Dominator",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 75,
       "sources": {
         "tapvalues": {
@@ -969,70 +1048,80 @@
         "rainbow": 200
       },
       "demand": 3,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     },
     {
       "name": "Sakura Nymph",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Sakura Nymph.png"
+      "image": "pets/Sakura Nymph.png",
+      "type": "All Pets"
     },
     {
       "name": "Sakura Queen",
-      "rarity": "Unknown",
+      "rarity": "Mythical",
       "value": 0,
       "sources": {},
-      "image": "pets/Sakura Queen.png"
+      "image": "pets/Sakura Queen.png",
+      "type": "Mythicals / Best Stat Pet"
     },
     {
       "name": "Samureye",
-      "rarity": "Unknown",
+      "rarity": "Mythical",
       "value": 0,
       "sources": {},
-      "image": "pets/Samureye.png"
+      "image": "pets/Samureye.png",
+      "type": "Mythicals / Best Stat Pet"
     },
     {
       "name": "Samuwai",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Samuwai.png"
+      "image": "pets/Samuwai.png",
+      "type": "All Pets"
     },
     {
       "name": "Sensei Panda",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Sensei Panda.png"
+      "image": "pets/Sensei Panda.png",
+      "type": "All Pets"
     },
     {
       "name": "Serapha",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Serapha.png"
+      "image": "pets/Serapha.png",
+      "type": "All Pets"
     },
     {
       "name": "Seraphlux",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Seraphlux.png"
+      "image": "pets/Seraphlux.png",
+      "type": "All Pets"
     },
     {
       "name": "Sharkie",
-      "rarity": "Unknown",
+      "rarity": "Mythical",
       "value": 0,
       "sources": {},
-      "image": "pets/Sharkie.png"
+      "image": "pets/Sharkie.png",
+      "type": "Mythicals / Best Stat Pet"
     },
     {
       "name": "Silent Assassin",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Silent Assassin.png"
+      "image": "pets/Silent Assassin.png",
+      "type": "All Pets"
     },
     {
       "name": "Silver Emperor",
@@ -1058,35 +1147,40 @@
         "rainbow": 1960
       },
       "demand": 9,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "All Pets"
     },
     {
       "name": "Social Dragon",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Social Dragon.png"
+      "image": "pets/Social Dragon.png",
+      "type": "All Pets"
     },
     {
       "name": "Sproutling",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Sproutling.png"
+      "image": "pets/Sproutling.png",
+      "type": "All Pets"
     },
     {
       "name": "Starfish",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Starfish.png"
+      "image": "pets/Starfish.png",
+      "type": "All Pets"
     },
     {
       "name": "Treant",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Treant.png"
+      "image": "pets/Treant.png",
+      "type": "All Pets"
     },
     {
       "name": "Trophy Guardian",
@@ -1112,39 +1206,44 @@
         "rainbow": 1550
       },
       "demand": 9,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "All Pets"
     },
     {
       "name": "Tundra God",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Tundra God.png"
+      "image": "pets/Tundra God.png",
+      "type": "All Pets"
     },
     {
       "name": "Voltgryph",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Voltgryph.png"
+      "image": "pets/Voltgryph.png",
+      "type": "All Pets"
     },
     {
       "name": "Waffle Knight",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Waffle Knight.png"
+      "image": "pets/Waffle Knight.png",
+      "type": "All Pets"
     },
     {
       "name": "Water Beast",
       "rarity": "Unknown",
       "value": 0,
       "sources": {},
-      "image": "pets/Water Beast.png"
+      "image": "pets/Water Beast.png",
+      "type": "All Pets"
     },
     {
       "name": "Weeping Angel",
-      "rarity": "Secret III",
+      "rarity": "Secret",
       "value": 45,
       "sources": {
         "tapvalues": {
@@ -1172,7 +1271,9 @@
         "rainbow": 115
       },
       "demand": 2,
-      "trend": "Stable"
+      "trend": "Stable",
+      "type": "Permanent Secrets"
     }
-  ]
+  ],
+  "type_system": "tabs + rarity (fixed secrets/exclusives)"
 }
