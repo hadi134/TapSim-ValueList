@@ -1,0 +1,581 @@
+{
+  "updated": "2025-12-27",
+  "pets": [
+    {
+      "name": "5M Frost Monarch",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/5M Frost Monarch.png"
+    },
+    {
+      "name": "5M North Star",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/5M North Star.png"
+    },
+    {
+      "name": "5M Snowglobe",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/5M Snowglobe.png"
+    },
+    {
+      "name": "Abyssal Behemoth",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Abyssal Behemoth.png"
+    },
+    {
+      "name": "Abyssal Burst",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Abyssal Burst.png"
+    },
+    {
+      "name": "Abyssal Leviathan",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Abyssal Leviathan.png"
+    },
+    {
+      "name": "Ancient Pyramid",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Ancient Pyramid.png"
+    },
+    {
+      "name": "Ancient Tyrant",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Ancient Tyrant.png"
+    },
+    {
+      "name": "Angelic Aura",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Angelic Aura.png"
+    },
+    {
+      "name": "Apex Deer",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Apex Deer.png"
+    },
+    {
+      "name": "Apex Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Apex Dragon.png"
+    },
+    {
+      "name": "Apex Supercharged",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Apex Supercharged.png"
+    },
+    {
+      "name": "Apex Warrior",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Apex Warrior.png"
+    },
+    {
+      "name": "Archangel",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Archangel.png"
+    },
+    {
+      "name": "Aurora Borealis",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Aurora Borealis.png"
+    },
+    {
+      "name": "Bee",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Bee.png"
+    },
+    {
+      "name": "Bell",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Bell.png"
+    },
+    {
+      "name": "Boreal Deer",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Boreal Deer.png"
+    },
+    {
+      "name": "Boreal Demon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Boreal Demon.png"
+    },
+    {
+      "name": "Candy Cane",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Candy Cane.png"
+    },
+    {
+      "name": "Candy Corn",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Candy Corn.png"
+    },
+    {
+      "name": "Candy Heart",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Candy Heart.png"
+    },
+    {
+      "name": "Candy Pumpkin",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Candy Pumpkin.png"
+    },
+    {
+      "name": "Candy Unicorn",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Candy Unicorn.png"
+    },
+    {
+      "name": "Celestial Prism",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Celestial Prism.png"
+    },
+    {
+      "name": "Celestial Seraph",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Celestial Seraph.png"
+    },
+    {
+      "name": "Christmas Bell",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Christmas Bell.png"
+    },
+    {
+      "name": "Christmas Tree",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Christmas Tree.png"
+    },
+    {
+      "name": "Clover",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Clover.png"
+    },
+    {
+      "name": "Cosmic Chimera",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cosmic Chimera.png"
+    },
+    {
+      "name": "Cosmic Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cosmic Dragon.png"
+    },
+    {
+      "name": "Cosmic Fox",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cosmic Fox.png"
+    },
+    {
+      "name": "Cosmic Hydra",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cosmic Hydra.png"
+    },
+    {
+      "name": "Cosmic Serpent",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cosmic Serpent.png"
+    },
+    {
+      "name": "Cosmic Tiger",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cosmic Tiger.png"
+    },
+    {
+      "name": "Crystal Blue",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Crystal Blue.png"
+    },
+    {
+      "name": "Crystal Pink",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Crystal Pink.png"
+    },
+    {
+      "name": "Crystal Red",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Crystal Red.png"
+    },
+    {
+      "name": "Cursed Bear",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Bear.png"
+    },
+    {
+      "name": "Cursed Cat",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Cat.png"
+    },
+    {
+      "name": "Cursed Dog",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Dog.png"
+    },
+    {
+      "name": "Cursed Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Dragon.png"
+    },
+    {
+      "name": "Cursed Fox",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Fox.png"
+    },
+    {
+      "name": "Cursed Lion",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Lion.png"
+    },
+    {
+      "name": "Cursed Wolf",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cursed Wolf.png"
+    },
+    {
+      "name": "Cupid",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cupid.png"
+    },
+    {
+      "name": "Cupid\u2019s Heart",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cupid\u2019s Heart.png"
+    },
+    {
+      "name": "Cupid\u2019s Love",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cupid\u2019s Love.png"
+    },
+    {
+      "name": "Cupid\u2019s Rose",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cupid\u2019s Rose.png"
+    },
+    {
+      "name": "Cupid\u2019s Wings",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cupid\u2019s Wings.png"
+    },
+    {
+      "name": "Cupid\u2019s Wrath",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Cupid\u2019s Wrath.png"
+    },
+    {
+      "name": "Demonic Aura",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Demonic Aura.png"
+    },
+    {
+      "name": "Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Dragon.png"
+    },
+    {
+      "name": "Egg",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Egg.png"
+    },
+    {
+      "name": "Enchanting Owl",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Enchanting Owl.png"
+    },
+    {
+      "name": "Enchanted Unicorn",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Enchanted Unicorn.png"
+    },
+    {
+      "name": "Epic Star",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Epic Star.png"
+    },
+    {
+      "name": "Frost Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Frost Dragon.png"
+    },
+    {
+      "name": "Frost Monarch",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Frost Monarch.png"
+    },
+    {
+      "name": "Frost Phoenix",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Frost Phoenix.png"
+    },
+    {
+      "name": "Frost Snowman",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Frost Snowman.png"
+    },
+    {
+      "name": "Frost Unicorn",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Frost Unicorn.png"
+    },
+    {
+      "name": "Gilded Angel",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Angel.png"
+    },
+    {
+      "name": "Gilded Bear",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Bear.png"
+    },
+    {
+      "name": "Gilded Cat",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Cat.png"
+    },
+    {
+      "name": "Gilded Dog",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Dog.png"
+    },
+    {
+      "name": "Gilded Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Dragon.png"
+    },
+    {
+      "name": "Gilded Fox",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Fox.png"
+    },
+    {
+      "name": "Gilded Lion",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Lion.png"
+    },
+    {
+      "name": "Gilded Wolf",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Gilded Wolf.png"
+    },
+    {
+      "name": "Glacier Bat",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Glacier Bat.png"
+    },
+    {
+      "name": "Glacier Fox",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Glacier Fox.png"
+    },
+    {
+      "name": "Glacier Polar Bear",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Glacier Polar Bear.png"
+    },
+    {
+      "name": "Glacier Pup",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Glacier Pup.png"
+    },
+    {
+      "name": "Glacier Snowman",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Glacier Snowman.png"
+    },
+    {
+      "name": "Glacier Wolf",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Glacier Wolf.png"
+    },
+    {
+      "name": "Golden Bear",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Bear.png"
+    },
+    {
+      "name": "Golden Cat",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Cat.png"
+    },
+    {
+      "name": "Golden Dog",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Dog.png"
+    },
+    {
+      "name": "Golden Dragon",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Dragon.png"
+    },
+    {
+      "name": "Golden Fox",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Fox.png"
+    },
+    {
+      "name": "Golden Lion",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Lion.png"
+    },
+    {
+      "name": "Golden Wolf",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Golden Wolf.png"
+    },
+    {
+      "name": "Heart",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Heart.png"
+    },
+    {
+      "name": "Heart Burst",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Heart Burst.png"
+    },
+    {
+      "name": "Heart Gem",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Heart Gem.png"
+    },
+    {
+      "name": "Heart Prism",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Heart Prism.png"
+    },
+    {
+      "name": "Heart Seraph",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Heart Seraph.png"
+    },
+    {
+      "name": "Heart Wings",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Heart Wings.png"
+    },
+    {
+      "name": "Love Aura",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Love Aura.png"
+    },
+    {
+      "name": "Love Burst",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Love Burst.png"
+    },
+    {
+      "name": "Love Prism",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Love Prism.png"
+    },
+    {
+      "name": "Love Seraph",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Love Seraph.png"
+    },
+    {
+      "name": "Love Wings",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Love Wings.png"
+    },
+    {
+      "name": "North Star",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/North Star.png"
+    },
+    {
+      "name": "Snowglobe",
+      "rarity": "Unknown",
+      "value": 0,
+      "image": "pets/Snowglobe.png"
+    }
+  ]
+}

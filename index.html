@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tap Simulator - Pet Value List</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: #12182a;
+      --text: #e8eefc;
+      --muted: #9aa7c2;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--text); }
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding: 18px 22px; border-bottom:1px solid var(--border);
+    }
+    header h1 { margin:0; font-size:20px; }
+    header p { margin:0; font-size:13px; color: var(--muted); }
+    .updated { font-size:13px; color: var(--muted); }
+    main { max-width:1100px; margin:0 auto; padding:22px; }
+    .controls {
+      display:grid; grid-template-columns: 1fr 200px 240px;
+      gap:10px; margin-bottom: 18px;
+    }
+    .controls input, .controls select {
+      background: var(--card); border:1px solid var(--border);
+      color: var(--text); padding:12px; border-radius:12px; outline:none;
+    }
+    .grid {
+      display:grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap:12px;
+    }
+    .card {
+      background: var(--card); border:1px solid var(--border);
+      border-radius:16px; padding:14px;
+      display:flex; flex-direction:column; gap:10px;
+      transition: transform 0.08s ease;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .pet-img {
+      width:100%; aspect-ratio:1/1; border-radius:14px;
+      object-fit:cover; border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+    .name-row { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .pet-name { margin:0; font-size:14px; font-weight:650; }
+    .badge {
+      font-size:11px; padding:4px 8px; border-radius:999px;
+      border:1px solid var(--border); white-space:nowrap;
+      text-transform:capitalize;
+    }
+    .value { font-size:13px; color: var(--muted); }
+    .footer-note { text-align:center; font-size:12px; color: var(--muted); margin-top:18px; }
+    @media (max-width: 760px) { .controls { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Tap Simulator</h1>
+      <p>Pet Value List</p>
+    </div>
+    <div class="updated" id="updatedText">Updated: --</div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input id="searchInput" type="text" placeholder="Search pets..." />
+      <select id="raritySelect">
+        <option value="all">All rarities</option>
+        <option value="common">Common</option>
+        <option value="rare">Rare</option>
+        <option value="epic">Epic</option>
+        <option value="legendary">Legendary</option>
+        <option value="secret i">Secret I</option>
+        <option value="secret ii">Secret II</option>
+        <option value="secret iii">Secret III</option>
+        <option value="exclusive">Exclusive</option>
+        <option value="research">Research</option>
+      </select>
+      <select id="sortSelect">
+        <option value="value_desc">Sort: Value (High → Low)</option>
+        <option value="value_asc">Sort: Value (Low → High)</option>
+        <option value="name_asc">Sort: Name (A → Z)</option>
+        <option value="name_desc">Sort: Name (Z → A)</option>
+      </select>
+    </section>
+
+    <section id="petsGrid" class="grid"></section>
+
+    <p class="footer-note">
+      Fan-made value list. Values can change anytime.
+    </p>
+  </main>
+
+  <script>
+    let pets = [];
+    const petsGrid = document.getElementById("petsGrid");
+    const searchInput = document.getElementById("searchInput");
+    const raritySelect = document.getElementById("raritySelect");
+    const sortSelect = document.getElementById("sortSelect");
+    const updatedText = document.getElementById("updatedText");
+
+    function rarityColor(rarity) {
+      const r = (rarity || "").toLowerCase();
+      if (r.includes("common")) return "#8b95a8";
+      if (r.includes("rare")) return "#4ea5ff";
+      if (r.includes("epic")) return "#b068ff";
+      if (r.includes("legendary")) return "#ffbd4a";
+      if (r.includes("secret")) return "#ff4e84";
+      if (r.includes("exclusive")) return "#4effd7";
+      if (r.includes("research")) return "#7dff4e";
+      return "#9aa7c2";
+    }
+
+    function formatValue(value) {
+      if (value === null || value === undefined) return "Unknown";
+      if (typeof value === "string") return value;
+      return value.toLocaleString();
+    }
+
+    function render(list) {
+      petsGrid.innerHTML = "";
+      if (!list.length) {
+        petsGrid.innerHTML = '<p style="color:#9aa7c2;">No pets found.</p>';
+        return;
+      }
+      list.forEach(pet => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const img = document.createElement("img");
+        img.className = "pet-img";
+        img.src = pet.image || "https://via.placeholder.com/300?text=No+Image";
+        img.alt = pet.name;
+
+        const nameRow = document.createElement("div");
+        nameRow.className = "name-row";
+
+        const name = document.createElement("p");
+        name.className = "pet-name";
+        name.textContent = pet.name;
+
+        const badge = document.createElement("span");
+        badge.className = "badge";
+        badge.textContent = pet.rarity || "Unknown";
+        badge.style.borderColor = rarityColor(pet.rarity);
+        badge.style.color = rarityColor(pet.rarity);
+
+        nameRow.appendChild(name);
+        nameRow.appendChild(badge);
+
+        const value = document.createElement("div");
+        value.className = "value";
+        value.textContent = "Value: " + formatValue(pet.value);
+
+        card.appendChild(img);
+        card.appendChild(nameRow);
+        card.appendChild(value);
+
+        petsGrid.appendChild(card);
+      });
+    }
+
+    function applyFilters() {
+      const query = searchInput.value.toLowerCase().trim();
+      const rarity = raritySelect.value;
+
+      let filtered = pets.filter(p => {
+        const matchesName = (p.name || "").toLowerCase().includes(query);
+        const matchesRarity = rarity === "all" ? true : ((p.rarity || "").toLowerCase() === rarity);
+        return matchesName && matchesRarity;
+      });
+
+      const sort = sortSelect.value;
+      filtered.sort((a, b) => {
+        if (sort === "value_desc") return (b.value || 0) - (a.value || 0);
+        if (sort === "value_asc") return (a.value || 0) - (b.value || 0);
+        if (sort === "name_asc") return (a.name || "").localeCompare(b.name || "");
+        if (sort === "name_desc") return (b.name || "").localeCompare(a.name || "");
+        return 0;
+      });
+
+      render(filtered);
+    }
+
+    async function loadPets() {
+      try {
+        const res = await fetch("data/pets.json");
+        const data = await res.json();
+        pets = data.pets || [];
+        updatedText.textContent = "Updated: " + (data.updated || "Unknown");
+        applyFilters();
+      } catch (err) {
+        petsGrid.innerHTML = '<p style="color:#9aa7c2;">Failed to load data/pets.json. Make sure file exists.</p>';
+        console.error(err);
+      }
+    }
+
+    searchInput.addEventListener("input", applyFilters);
+    raritySelect.addEventListener("change", applyFilters);
+    sortSelect.addEventListener("change", applyFilters);
+
+    loadPets();
+  </script>
+</body>
+</html>
