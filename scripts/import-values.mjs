@@ -1,5 +1,11 @@
 import fs from "fs";
 
+async function fetchText(url) {
+  const res = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0" } });
+  if (!res.ok) throw new Error(`Fetch failed: ${res.status} ${url}`);
+  return await res.text();
+}
+
 const OUT_FILE = "data/pets.json";
 const PETS_FOLDER = "pets";
 
