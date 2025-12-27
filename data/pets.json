@@ -1,20 +1,58 @@
 {
   "updated": "2025-12-27",
-  "method": "median",
+  "method": "median-ready",
   "pets": [
     {
       "name": "5M Frost Monarch",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/5M Frost Monarch.png"
+      "rarity": "Exclusive",
+      "value": 1150,
+      "sources": {
+        "moonvalues": {
+          "normal": 1000,
+          "trend": "Very High",
+          "demand": 9
+        },
+        "cosmo": {
+          "normal": 1150,
+          "golden": 3900,
+          "rainbow": 4100,
+          "demand": 5
+        }
+      },
+      "image": "pets/5M Frost Monarch.png",
+      "values": {
+        "normal": 1150,
+        "golden": 3900,
+        "rainbow": 4100
+      },
+      "demand": 5,
+      "trend": "Stable"
     },
     {
       "name": "5M North Star",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/5M North Star.png"
+      "rarity": "Exclusive",
+      "value": 180,
+      "sources": {
+        "moonvalues": {
+          "normal": 250,
+          "trend": "High",
+          "demand": 7
+        },
+        "cosmo": {
+          "normal": 180,
+          "golden": 450,
+          "rainbow": 550,
+          "demand": 4
+        }
+      },
+      "image": "pets/5M North Star.png",
+      "values": {
+        "normal": 180,
+        "golden": 450,
+        "rainbow": 550
+      },
+      "demand": 4,
+      "trend": "Stable"
     },
     {
       "name": "5M Snowglobe",
@@ -39,10 +77,29 @@
     },
     {
       "name": "Archangel",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Archangel.png"
+      "rarity": "Legendary",
+      "value": 1,
+      "sources": {
+        "moonvalues": {
+          "normal": 0.1,
+          "trend": "Very Low",
+          "demand": 0
+        },
+        "cosmo": {
+          "normal": 1,
+          "golden": 2,
+          "rainbow": 4,
+          "demand": 0
+        }
+      },
+      "image": "pets/Archangel.png",
+      "values": {
+        "normal": 1,
+        "golden": 2,
+        "rainbow": 4
+      },
+      "demand": 0,
+      "trend": "Stable"
     },
     {
       "name": "Arid Goat",
@@ -137,10 +194,29 @@
     },
     {
       "name": "Bubblegum Chaos",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Bubblegum Chaos.png"
+      "rarity": "Epic",
+      "value": 0.1,
+      "sources": {
+        "moonvalues": {
+          "normal": 0.5,
+          "trend": "Very Low",
+          "demand": 1
+        },
+        "cosmo": {
+          "normal": 0.1,
+          "golden": 0.15,
+          "rainbow": 0.3,
+          "demand": 2
+        }
+      },
+      "image": "pets/Bubblegum Chaos.png",
+      "values": {
+        "normal": 0.1,
+        "golden": 0.15,
+        "rainbow": 0.3
+      },
+      "demand": 2,
+      "trend": "Stable"
     },
     {
       "name": "Cactus Raider",
@@ -151,10 +227,35 @@
     },
     {
       "name": "Candy God",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Candy God.png"
+      "rarity": "Secret III",
+      "value": 35,
+      "sources": {
+        "tapvalues": {
+          "normal": 45,
+          "rainbow": 200,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 60,
+          "trend": "Low",
+          "demand": 3
+        },
+        "cosmo": {
+          "normal": 35,
+          "golden": 55,
+          "rainbow": 70,
+          "demand": 3
+        }
+      },
+      "image": "pets/Candy God.png",
+      "values": {
+        "normal": 35,
+        "golden": 55,
+        "rainbow": 70
+      },
+      "demand": 3,
+      "trend": "Stable"
     },
     {
       "name": "Caramel Bunny",
@@ -165,17 +266,61 @@
     },
     {
       "name": "Chocolate Marauder",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Chocolate Marauder.png"
+      "rarity": "Secret III",
+      "value": 45,
+      "sources": {
+        "tapvalues": {
+          "normal": 80,
+          "rainbow": 360,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 115,
+          "trend": "Low",
+          "demand": 4
+        },
+        "cosmo": {
+          "normal": 45,
+          "golden": 65,
+          "rainbow": 80,
+          "demand": 3
+        }
+      },
+      "image": "pets/Chocolate Marauder.png",
+      "values": {
+        "normal": 45,
+        "golden": 65,
+        "rainbow": 80
+      },
+      "demand": 3,
+      "trend": "Stable"
     },
     {
       "name": "Chronos",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Chronos.png"
+      "rarity": "Secret II",
+      "value": 9500,
+      "sources": {
+        "moonvalues": {
+          "normal": 5250,
+          "trend": "Very High",
+          "demand": 10
+        },
+        "cosmo": {
+          "normal": 9500,
+          "golden": 16500,
+          "rainbow": 16800,
+          "demand": 8
+        }
+      },
+      "image": "pets/Chronos.png",
+      "values": {
+        "normal": 9500,
+        "golden": 16500,
+        "rainbow": 16800
+      },
+      "demand": 8,
+      "trend": "Stable"
     },
     {
       "name": "Cotton Candy Pop",
@@ -200,17 +345,61 @@
     },
     {
       "name": "Divine Celestia",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Divine Celestia.png"
+      "rarity": "Secret II",
+      "value": 3500,
+      "sources": {
+        "moonvalues": {
+          "normal": 20000,
+          "trend": "Very High",
+          "demand": 10
+        },
+        "cosmo": {
+          "normal": 3500,
+          "golden": 9500,
+          "rainbow": 10000,
+          "demand": 10
+        }
+      },
+      "image": "pets/Divine Celestia.png",
+      "values": {
+        "normal": 3500,
+        "golden": 9500,
+        "rainbow": 10000
+      },
+      "demand": 10,
+      "trend": "Stable"
     },
     {
       "name": "Divine Dragon",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Divine Dragon.png"
+      "rarity": "Secret III",
+      "value": 30,
+      "sources": {
+        "tapvalues": {
+          "normal": 30,
+          "rainbow": 135,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 45,
+          "trend": "Very Low",
+          "demand": 2
+        },
+        "cosmo": {
+          "normal": 30,
+          "golden": 75,
+          "rainbow": 90,
+          "demand": 3
+        }
+      },
+      "image": "pets/Divine Dragon.png",
+      "values": {
+        "normal": 30,
+        "golden": 75,
+        "rainbow": 90
+      },
+      "demand": 3,
+      "trend": "Stable"
     },
     {
       "name": "Divine Guard",
@@ -326,10 +515,29 @@
     },
     {
       "name": "Frosty Snowman",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Frosty Snowman.png"
+      "rarity": "Secret",
+      "value": 95,
+      "sources": {
+        "moonvalues": {
+          "normal": 90,
+          "trend": "Medium",
+          "demand": 6
+        },
+        "cosmo": {
+          "normal": 95,
+          "golden": 450,
+          "rainbow": 550,
+          "demand": 7
+        }
+      },
+      "image": "pets/Frosty Snowman.png",
+      "values": {
+        "normal": 95,
+        "golden": 450,
+        "rainbow": 550
+      },
+      "demand": 7,
+      "trend": "Stable"
     },
     {
       "name": "Frozen Yeti",
@@ -340,10 +548,29 @@
     },
     {
       "name": "Gingerbread Dragon",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Gingerbread Dragon.png"
+      "rarity": "Exclusive",
+      "value": 0.5,
+      "sources": {
+        "moonvalues": {
+          "normal": 2,
+          "trend": "Very Low",
+          "demand": 1
+        },
+        "cosmo": {
+          "normal": 0.5,
+          "golden": 1,
+          "rainbow": 2,
+          "demand": 4
+        }
+      },
+      "image": "pets/Gingerbread Dragon.png",
+      "values": {
+        "normal": 0.5,
+        "golden": 1,
+        "rainbow": 2
+      },
+      "demand": 4,
+      "trend": "Stable"
     },
     {
       "name": "Hydra Magma Empyreus",
@@ -361,10 +588,29 @@
     },
     {
       "name": "Kairos",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Kairos.png"
+      "rarity": "Secret II",
+      "value": 110,
+      "sources": {
+        "moonvalues": {
+          "normal": 140,
+          "trend": "Medium",
+          "demand": 5
+        },
+        "cosmo": {
+          "normal": 110,
+          "golden": 280,
+          "rainbow": 350,
+          "demand": 6
+        }
+      },
+      "image": "pets/Kairos.png",
+      "values": {
+        "normal": 110,
+        "golden": 280,
+        "rainbow": 350
+      },
+      "demand": 6,
+      "trend": "Stable"
     },
     {
       "name": "Karate Lynx",
@@ -382,17 +628,61 @@
     },
     {
       "name": "King Emblazed",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/King Emblazed.png"
+      "rarity": "Rare",
+      "value": 0.1,
+      "sources": {
+        "moonvalues": {
+          "normal": 0.3,
+          "trend": "Very Low",
+          "demand": 0
+        },
+        "cosmo": {
+          "normal": 0.1,
+          "golden": 0.2,
+          "rainbow": 0.3,
+          "demand": 1
+        }
+      },
+      "image": "pets/King Emblazed.png",
+      "values": {
+        "normal": 0.1,
+        "golden": 0.2,
+        "rainbow": 0.3
+      },
+      "demand": 1,
+      "trend": "Stable"
     },
     {
       "name": "King Kraken",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/King Kraken.png"
+      "rarity": "Secret III",
+      "value": 350,
+      "sources": {
+        "tapvalues": {
+          "normal": 240,
+          "rainbow": 1080,
+          "trend": "Dropping",
+          "demand": 4
+        },
+        "moonvalues": {
+          "normal": 400,
+          "trend": "Low",
+          "demand": 4
+        },
+        "cosmo": {
+          "normal": 350,
+          "golden": 1850,
+          "rainbow": 2050,
+          "demand": 6
+        }
+      },
+      "image": "pets/King Kraken.png",
+      "values": {
+        "normal": 350,
+        "golden": 1850,
+        "rainbow": 2050
+      },
+      "demand": 6,
+      "trend": "Stable"
     },
     {
       "name": "Lava God",
@@ -431,10 +721,35 @@
     },
     {
       "name": "Magmasaur",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Magmasaur.png"
+      "rarity": "Secret III",
+      "value": 50,
+      "sources": {
+        "tapvalues": {
+          "normal": 40,
+          "rainbow": 180,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 55,
+          "trend": "Very Low",
+          "demand": 2
+        },
+        "cosmo": {
+          "normal": 50,
+          "golden": 95,
+          "rainbow": 125,
+          "demand": 4
+        }
+      },
+      "image": "pets/Magmasaur.png",
+      "values": {
+        "normal": 50,
+        "golden": 95,
+        "rainbow": 125
+      },
+      "demand": 4,
+      "trend": "Stable"
     },
     {
       "name": "Magmatic Angel",
@@ -501,17 +816,61 @@
     },
     {
       "name": "Orca Dominator",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Orca Dominator.png"
+      "rarity": "Secret III",
+      "value": 55,
+      "sources": {
+        "tapvalues": {
+          "normal": 45,
+          "rainbow": 200,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 60,
+          "trend": "Low",
+          "demand": 4
+        },
+        "cosmo": {
+          "normal": 55,
+          "golden": 150,
+          "rainbow": 165,
+          "demand": 4
+        }
+      },
+      "image": "pets/Orca Dominator.png",
+      "values": {
+        "normal": 55,
+        "golden": 150,
+        "rainbow": 165
+      },
+      "demand": 4,
+      "trend": "Stable"
     },
     {
       "name": "Paradox",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Paradox.png"
+      "rarity": "Secret II",
+      "value": 165,
+      "sources": {
+        "moonvalues": {
+          "normal": 200,
+          "trend": "Medium",
+          "demand": 5
+        },
+        "cosmo": {
+          "normal": 165,
+          "golden": 690,
+          "rainbow": 740,
+          "demand": 7
+        }
+      },
+      "image": "pets/Paradox.png",
+      "values": {
+        "normal": 165,
+        "golden": 690,
+        "rainbow": 740
+      },
+      "demand": 7,
+      "trend": "Stable"
     },
     {
       "name": "Penguin",
@@ -543,10 +902,35 @@
     },
     {
       "name": "Raging Claw",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Raging Claw.png"
+      "rarity": "Secret III",
+      "value": 70,
+      "sources": {
+        "tapvalues": {
+          "normal": 45,
+          "rainbow": 200,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 50,
+          "trend": "Very Low",
+          "demand": 2
+        },
+        "cosmo": {
+          "normal": 70,
+          "golden": 230,
+          "rainbow": 270,
+          "demand": 2
+        }
+      },
+      "image": "pets/Raging Claw.png",
+      "values": {
+        "normal": 70,
+        "golden": 230,
+        "rainbow": 270
+      },
+      "demand": 2,
+      "trend": "Stable"
     },
     {
       "name": "Royal Jelly",
@@ -557,10 +941,35 @@
     },
     {
       "name": "Sakura Dominator",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Sakura Dominator.png"
+      "rarity": "Secret III",
+      "value": 75,
+      "sources": {
+        "tapvalues": {
+          "normal": 40,
+          "rainbow": 180,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 40,
+          "trend": "Very Low",
+          "demand": 2
+        },
+        "cosmo": {
+          "normal": 75,
+          "golden": 170,
+          "rainbow": 200,
+          "demand": 3
+        }
+      },
+      "image": "pets/Sakura Dominator.png",
+      "values": {
+        "normal": 75,
+        "golden": 170,
+        "rainbow": 200
+      },
+      "demand": 3,
+      "trend": "Stable"
     },
     {
       "name": "Sakura Nymph",
@@ -627,10 +1036,29 @@
     },
     {
       "name": "Silver Emperor",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Silver Emperor.png"
+      "rarity": "Secret II",
+      "value": 950,
+      "sources": {
+        "moonvalues": {
+          "normal": 1425,
+          "trend": "Very High",
+          "demand": 9
+        },
+        "cosmo": {
+          "normal": 950,
+          "golden": 1540,
+          "rainbow": 1960,
+          "demand": 9
+        }
+      },
+      "image": "pets/Silver Emperor.png",
+      "values": {
+        "normal": 950,
+        "golden": 1540,
+        "rainbow": 1960
+      },
+      "demand": 9,
+      "trend": "Stable"
     },
     {
       "name": "Social Dragon",
@@ -662,10 +1090,29 @@
     },
     {
       "name": "Trophy Guardian",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Trophy Guardian.png"
+      "rarity": "Secret II",
+      "value": 500,
+      "sources": {
+        "moonvalues": {
+          "normal": 725,
+          "trend": "High",
+          "demand": 8
+        },
+        "cosmo": {
+          "normal": 500,
+          "golden": 1300,
+          "rainbow": 1550,
+          "demand": 9
+        }
+      },
+      "image": "pets/Trophy Guardian.png",
+      "values": {
+        "normal": 500,
+        "golden": 1300,
+        "rainbow": 1550
+      },
+      "demand": 9,
+      "trend": "Stable"
     },
     {
       "name": "Tundra God",
@@ -697,10 +1144,35 @@
     },
     {
       "name": "Weeping Angel",
-      "rarity": "Unknown",
-      "value": 0,
-      "sources": {},
-      "image": "pets/Weeping Angel.png"
+      "rarity": "Secret III",
+      "value": 45,
+      "sources": {
+        "tapvalues": {
+          "normal": 35,
+          "rainbow": 160,
+          "trend": "Dropping",
+          "demand": 3
+        },
+        "moonvalues": {
+          "normal": 35,
+          "trend": "Very Low",
+          "demand": 2
+        },
+        "cosmo": {
+          "normal": 45,
+          "golden": 95,
+          "rainbow": 115,
+          "demand": 2
+        }
+      },
+      "image": "pets/Weeping Angel.png",
+      "values": {
+        "normal": 45,
+        "golden": 95,
+        "rainbow": 115
+      },
+      "demand": 2,
+      "trend": "Stable"
     }
   ]
 }
