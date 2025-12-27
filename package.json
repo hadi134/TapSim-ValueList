@@ -1,0 +1,8 @@
+{
+  "name": "tapsim-values",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "import": "node scripts/import-values.mjs"
+  }
+}
