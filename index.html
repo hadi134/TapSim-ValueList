@@ -85,6 +85,7 @@
   <main>
     <section class="controls">
       <input id="searchInput" type="text" placeholder="Search pets..." />
+
       <select id="raritySelect">
         <option value="all">All rarities</option>
         <option value="common">Common</option>
@@ -142,15 +143,17 @@
       return "#9aa7c2";
     }
 
+    // show ? for missing/zero values
     function formatValue(v) {
-      if (v === null || v === undefined) return "0";
+      if (v === null || v === undefined) return "?";
       if (typeof v === "string") return v;
-      if (Number.isNaN(Number(v))) return "0";
+      if (Number.isNaN(Number(v))) return "?";
+      if (Number(v) === 0) return "?";
       return Number(v).toLocaleString();
     }
 
     function getVariantValues(p) {
-      // Supports both old and new structure
+      // supports both old and new structures
       const values = p.values || {};
       const normal = (values.normal ?? p.value ?? 0);
       const golden = (values.golden ?? 0);
@@ -160,7 +163,6 @@
 
     function bestSortValue(p) {
       const v = getVariantValues(p);
-      // pick highest available variant so sorting makes sense
       return Math.max(Number(v.normal)||0, Number(v.golden)||0, Number(v.rainbow)||0);
     }
 
@@ -199,10 +201,9 @@
         nameRow.appendChild(name);
         nameRow.appendChild(badge);
 
-        // Values row
+        // ✅ Values row (ALWAYS show all 3 variants)
         const pillRow = document.createElement("div");
         pillRow.className = "pillrow";
-
         const show = variantSelect.value;
 
         if (show === "all" || show === "normal") {
@@ -212,28 +213,28 @@
           pillRow.appendChild(pill);
         }
 
-        if ((show === "all" || show === "golden") && Number(golden) > 0) {
+        if (show === "all" || show === "golden") {
           const pill = document.createElement("div");
           pill.className = "pill";
           pill.innerHTML = `Golden: <strong>${formatValue(golden)}</strong>`;
           pillRow.appendChild(pill);
         }
 
-        if ((show === "all" || show === "rainbow") && Number(rainbow) > 0) {
+        if (show === "all" || show === "rainbow") {
           const pill = document.createElement("div");
           pill.className = "pill";
           pill.innerHTML = `Rainbow: <strong>${formatValue(rainbow)}</strong>`;
           pillRow.appendChild(pill);
         }
 
-        // Demand + Trend
+        // Demand + Trend line
         const meta = document.createElement("div");
         meta.className = "tiny";
         const demand = pet.demand !== undefined ? `${pet.demand}/10` : "—";
         const trend = pet.trend || "—";
         meta.textContent = `Demand: ${demand} • Trend: ${trend}`;
 
-        // Sources row
+        // Sources
         const sources = document.createElement("div");
         sources.className = "sources";
         const keys = pet.sources ? Object.keys(pet.sources) : [];
